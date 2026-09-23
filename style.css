@@ -90,8 +90,11 @@ section {
   .hero img {
     max-height: 480px;
   }
-  }
-  .site-nav {
+}
+
+/* Navigation */
+
+.site-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 22px;
@@ -105,9 +108,13 @@ section {
   border-bottom: 1px solid transparent;
 }
 
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
   border-bottom: 1px solid #111;
 }
+
+/* Foto auf der Startseite einblenden */
+
 .intro-image {
   opacity: 0;
   transform: translateY(24px);
@@ -127,9 +134,7 @@ section {
   }
 }
 
-.site-nav a[aria-current="page"] {
-  border-bottom: 1px solid #111;
-}
+/* Social-Media-Symbole */
 
 .social-links {
   display: flex;
