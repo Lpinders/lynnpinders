@@ -16,14 +16,6 @@ body {
   padding: 48px 24px;
 }
 
-.hero {
-  min-height: 80vh;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 56px;
-  align-items: center;
-}
-
 .kicker {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -50,49 +42,23 @@ h2 {
   font-size: 1.2rem;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 32px;
-}
-
 a {
   color: #111;
   text-underline-offset: 4px;
-}
-
-.hero img {
-  width: 100%;
-  max-height: 620px;
-  object-fit: cover;
-  border-radius: 2px;
 }
 
 section {
   max-width: 760px;
 }
 
-.links {
-  padding-left: 20px;
-}
-
-.links li {
-  margin-bottom: 12px;
-}
-
-@media (max-width: 800px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .hero img {
-    max-height: 480px;
-  }
-}
-
 /* Navigation */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 32px;
+}
 
 .site-nav {
   display: flex;
@@ -113,7 +79,26 @@ section {
   border-bottom: 1px solid #111;
 }
 
-/* Foto auf der Startseite einblenden */
+/* Startseite: Einstieg mit Foto */
+
+.hero {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+section.hero {
+  max-width: none;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 620px;
+  object-fit: cover;
+  border-radius: 2px;
+}
 
 .intro-image {
   opacity: 0;
@@ -134,96 +119,7 @@ section {
   }
 }
 
-/* Kontaktseite */
-
-.contact-list {
-  margin: 48px 0 0;
-}
-
-.contact-row {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 24px;
-  align-items: baseline;
-  padding: 14px 0;
-}
-
-.contact-row dt {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.8rem;
-}
-
-.contact-row dd {
-  margin: 0;
-}
-
-.contact-mail {
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
-  text-decoration: none;
-  border-bottom: 1px solid #111;
-}
-
-.contact-mail:hover {
-  color: #8a2c1d;
-  border-bottom-color: #8a2c1d;
-}
-
-/* Social-Media-Symbole */
-
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
-}
-
-.social-links a {
-  color: #111;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.social-links i {
-  font-size: 1.8rem;
-}
-
-.social-links a:hover {
-  color: #8a2c1d;
-}
-
-/* Fußzeile */
-
-.site-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
-  margin-top: 120px;
-  font-size: 0.9rem;
-}
-
-.site-footer a {
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-  .contact-row {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-}
-
-/* Überschrift der Kontaktseite */
-
-.contact-title {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  line-height: 1.1;
-}
-
-/* Startseite */
+/* Buttons */
 
 .actions {
   display: flex;
@@ -258,10 +154,26 @@ section {
   color: #8a2c1d;
 }
 
+/* Abschnitte */
+
 .home-section {
   max-width: none;
   margin-top: 100px;
 }
+
+/* Startseite: Medien */
+
+.outlets-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  font-size: 1.3rem;
+}
+
+/* Über mich: Schwerpunkte */
 
 .topics {
   list-style: none;
@@ -281,6 +193,8 @@ section {
 .topics p {
   margin: 0;
 }
+
+/* Portfolio: Artikel */
 
 .articles {
   list-style: none;
@@ -319,32 +233,65 @@ section {
   color: #8a2c1d;
 }
 
-.more-link {
+/* Kontaktseite */
+
+.contact-title {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  line-height: 1.35;
+  max-width: 680px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.social-links a {
+  color: #111;
   text-decoration: none;
-  border-bottom: 1px solid #111;
+  transition: color 0.2s;
 }
 
-.more-link:hover {
+.social-links i {
+  font-size: 1.8rem;
+}
+
+.social-links a:hover {
   color: #8a2c1d;
-  border-bottom-color: #8a2c1d;
 }
 
-.outlets {
-  font-size: 1.3rem;
-  margin: 0;
+/* Fußzeile */
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 120px;
+  font-size: 0.9rem;
 }
 
-.cta h2 {
-  margin-top: 0;
-  max-width: 620px;
-  line-height: 1.2;
+.site-footer a {
+  text-decoration: none;
 }
 
-section.hero {
-  max-width: none;
+.site-footer a:hover {
+  text-decoration: underline;
 }
+
+/* Handy und kleine Bildschirme */
 
 @media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero img {
+    max-height: 480px;
+  }
+
   .topics {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -353,34 +300,4 @@ section.hero {
   .home-section {
     margin-top: 72px;
   }
-}
-
-/* Social-Media-Symbole auf der Kontaktseite */
-
-.social-links {
-  margin-top: 40px;
-}
-
-/* Kleinere Überschrift auf der Kontaktseite */
-
-.contact-title {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-}
-
-/* Liste der Medien auf der Startseite */
-
-.outlets-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 32px;
-  font-size: 1.3rem;
-}
-
-/* Abstand der Social-Media-Symbole auf der Kontaktseite */
-
-.social-links {
-  margin-top: 40px;
 }
