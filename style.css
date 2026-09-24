@@ -355,6 +355,12 @@ section.hero {
   }
 }
 
+/* Social-Media-Symbole auf der Kontaktseite */
+
+.social-links {
+  margin-top: 40px;
+}
+
 /* Kleinere Überschrift auf der Kontaktseite */
 
 .contact-title {
