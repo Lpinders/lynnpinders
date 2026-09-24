@@ -173,6 +173,39 @@ section.hero {
   font-size: 1.3rem;
 }
 
+/* Über mich: Bild links, Text rechts */
+
+.about-intro {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-figure {
+  margin: 0;
+}
+
+.about-portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+.about-figure figcaption {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin: 0 0 18px;
+}
+
 /* Über mich: Schwerpunkte */
 
 .topics {
@@ -290,6 +323,11 @@ section.hero {
 
   .hero img {
     max-height: 480px;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .topics {
